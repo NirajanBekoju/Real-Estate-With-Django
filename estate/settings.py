@@ -66,8 +66,11 @@ WSGI_APPLICATION = 'estate.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
+        'ENGINE': 'django.db.backends.postgresql',
+        'NAME': 'real_estate',
+        'USER': 'nirajan',
+        'PASSWORD': 'nirajan123',
+        'HOST': '127.0.0.1'
     }
 }
 
@@ -113,3 +116,7 @@ STATIC_URL = '/static/'
 STATICFILES_DIRS = (
      os.path.join(BASE_DIR, 'static'),
 )
+
+# MEDIA FOLDER SETTING
+MEDIA_URL = '/media/'
+MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
